@@ -111,9 +111,16 @@
   .intro-bild { width: 100%; border-radius: 16px; display: block; margin-bottom: 18px; border: 1px solid var(--border); }
   .intro-titel { font-size: clamp(1.7rem, 7vw, 2.3rem); line-height: 1.05; margin-bottom: 6px; }
   .intro-sub { color: var(--muted); font-size: 0.96rem; margin-bottom: 18px; }
-  .text-karte { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px 20px; margin-bottom: 18px; }
+  .text-karte, .karte, .punkte-breakdown, .team-liste-finale {
+    -webkit-mask-image: url('bilder/papier-maske.png'); mask-image: url('bilder/papier-maske.png');
+    -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    -webkit-mask-position: center; mask-position: center;
+    filter: drop-shadow(0 3px 6px rgba(33,20,8,0.25));
+  }
+  .text-karte { background: var(--card); padding: 30px 30px 32px; margin-bottom: 22px; }
   .text-karte > *:last-child { margin-bottom: 0; }
-  .regeln { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin-bottom: 20px; }
+  .regeln { background: var(--card); padding: 16px 18px; margin-bottom: 20px; }
   .regeln ol { margin: 8px 0 0; padding-left: 20px; font-size: 0.92rem; color: var(--muted); }
   .regeln li { margin-bottom: 8px; }
   .regeln b { color: var(--ink); }
@@ -148,7 +155,7 @@
 
   .text-link { background: none; border: none; color: var(--muted); font-family: var(--body); font-size: 0.82rem; text-decoration: underline; cursor: pointer; padding: 6px 0; }
 
-  .karte { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 20px 20px 22px; margin-bottom: 16px; }
+  .karte { background: var(--card); padding: 30px 28px 32px; margin-bottom: 20px; }
   .karte.still { border-color: var(--stille); }
   .station-bild { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 12px; margin-bottom: 14px; background: var(--accent-light); }
   .station-kicker { font-family: var(--display-label); font-size: 0.92rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 4px; }
@@ -252,7 +259,7 @@
   .finale-bild { width: 100%; border-radius: 16px; margin-bottom: 18px; border: 1px solid var(--border); }
   .finale-zeit { font-family: var(--mono); font-size: 3rem; font-weight: 700; color: var(--gold); text-align: center; margin: 6px 0 2px; font-variant-numeric: tabular-nums; }
   .finale-label { text-align: center; color: var(--muted); font-size: 0.82rem; margin-bottom: 18px; }
-  .punkte-breakdown { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 6px 18px 14px; margin: 0 0 18px; font-size: 0.88rem; }
+  .punkte-breakdown { background: var(--card); padding: 26px 26px 24px; margin: 0 0 22px; font-size: 0.88rem; }
   .punkte-zeile { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; }
   .punkte-zeile + .punkte-zeile { border-top: 1px solid var(--border); }
   .finale-zeit-klein { text-align: center; color: var(--muted); font-size: 0.8rem; margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--border); }
@@ -260,7 +267,7 @@
   .schatz-box .kicker { font-family: var(--display-label); font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 8px; }
   .schatz-code { font-family: var(--mono); font-size: 2rem; font-weight: 700; letter-spacing: 0.2em; color: var(--ink); margin-bottom: 6px; }
   .schatz-box p.hinweis { font-size: 0.86rem; color: var(--muted); }
-  .team-liste-finale { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin-bottom: 18px; font-size: 0.9rem; }
+  .team-liste-finale { background: var(--card); padding: 26px 26px; margin-bottom: 22px; font-size: 0.9rem; }
   .team-liste-finale b { font-family: var(--display-label); font-size: 1.1rem; }
   .fotostrecke { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 18px; }
   .fotostrecke img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
