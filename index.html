@@ -269,6 +269,7 @@
   .schatz-box p.hinweis { font-size: 0.86rem; color: var(--muted); }
   .team-liste-finale { background: var(--card); padding: 26px 26px; margin-bottom: 22px; font-size: 0.9rem; }
   .team-liste-finale b { font-family: var(--display-label); font-size: 1.1rem; }
+  .fotostrecke-label { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
   .fotostrecke { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 18px; }
   .fotostrecke img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
 
@@ -1393,7 +1394,10 @@
         '<p class="schatz-code">' + code + '</p>' +
         '<p class="hinweis">Zeigt diesen Code und eure Beweisfotos eurer Lehrkraft am <b>Café Coubertin</b> (Hans-Jochen-Vogel-Platz), um euren Schatz einzulösen.</p>' +
       '</div>' +
-      '<div class="fotostrecke">' + fotos.map(function(f) { return '<img src="' + f + '" alt="">'; }).join("") + '</div>' +
+      (fotos.length ?
+        '<p class="fotostrecke-label">Eure Fotos – nur auf diesem Handy gespeichert, nirgendwo hochgeladen. Foto gedrückt halten und „Zu Fotos hinzufügen“ bzw. „Bild speichern“ wählen, um es in eurer eigenen Galerie zu sichern.</p>' +
+        '<div class="fotostrecke">' + fotos.map(function(f) { return '<img src="' + f + '" alt="">'; }).join("") + '</div>'
+      : "") +
       '<div class="team-liste-finale"><b>' + escapeHtml(zustand.teamname) + '</b><br>' + escapeHtml(zustand.namen) + '</div>' +
       '<button class="text-link" id="neustart-btn">Neue Runde starten</button>';
 
